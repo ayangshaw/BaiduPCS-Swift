@@ -11,6 +11,7 @@ CLAUDE.local.md
 
 # Build output and per-user Xcode state.
 .build/
+build/
 .swiftpm/
 DerivedData/
 xcuserdata/

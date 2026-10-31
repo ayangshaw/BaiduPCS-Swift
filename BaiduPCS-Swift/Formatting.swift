@@ -17,7 +17,7 @@ extension JobProgress {
             parts.append(speedText)
         }
         if let remainingTimeText {
-            parts.append("剩余 \(remainingTimeText)")
+            parts.append(String(localized: "剩余 \(remainingTimeText)"))
         }
         return parts.joined(separator: " · ")
     }
@@ -46,19 +46,20 @@ extension Job {
     func statusText(isRunning: Bool, cleansUp: Bool) -> String {
         switch phase {
         case .transferring:
-            return isNetdisk ? "准备中 · 正在列出文件…" : "正在转存…"
+            return isNetdisk ? String(localized: "准备中 · 正在列出文件…") : String(localized: "正在转存…")
         case .downloading:
-            if isPaused { return "已暂停" }
+            if isPaused { return String(localized: "已暂停") }
             if files.allSatisfy(\.isCompleted) {
-                return cleansUp && hasJobDirectory ? "正在清理网盘中的转存文件…" : "正在完成…"
+                return cleansUp && hasJobDirectory
+                    ? String(localized: "正在清理网盘中的转存文件…") : String(localized: "正在完成…")
             }
-            return isRunning ? "正在下载" : "等待下载"
+            return isRunning ? String(localized: "正在下载") : String(localized: "等待下载")
         case .completed:
-            return "已完成"
+            return String(localized: "已完成")
         case .failed(.transfer):
-            return isNetdisk ? "准备失败" : "转存失败"
+            return isNetdisk ? String(localized: "准备失败") : String(localized: "转存失败")
         case .failed(.download):
-            return "下载失败"
+            return String(localized: "下载失败")
         }
     }
 }
@@ -66,10 +67,10 @@ extension Job {
 extension DownloadSnapshot {
     var statusText: String {
         switch state {
-        case .queued: "等待下载"
-        case .running: bytesPerSecond > 0 ? "\(Int64(bytesPerSecond).byteCount)/s" : "正在下载"
-        case .paused: "已暂停"
-        case .completed: "已完成"
+        case .queued: String(localized: "等待下载")
+        case .running: bytesPerSecond > 0 ? "\(Int64(bytesPerSecond).byteCount)/s" : String(localized: "正在下载")
+        case .paused: String(localized: "已暂停")
+        case .completed: String(localized: "已完成")
         case .failed(let failure): failure.message
         }
     }

@@ -25,7 +25,6 @@ struct MainView: View {
         } detail: {
             JobListView(jobs: jobs, category: current, searchText: query, selection: $selection, onRemove: requestRemoval)
                 .edgeBar(.top) { Banners() }
-                .edgeBar(.bottom) { StatusBar() }
                 .navigationTitle(current.title)
                 .navigationSubtitle("\(categoryJobs.count) 个任务")
                 .searchable(text: $searchText, placement: .toolbar, prompt: "搜索任务")
@@ -135,8 +134,9 @@ private struct PendingRemoval {
     let removal: JobRemoval
 
     var title: String {
-        let subject = jobs.count == 1 ? "移除“\(jobs[0].title)”" : "移除 \(jobs.count) 个任务"
-        return removal == .trashingFiles ? subject + "并删除文件？" : subject + "？"
+        let subject = jobs.count == 1
+            ? String(localized: "移除“\(jobs[0].title)”") : String(localized: "移除 \(jobs.count) 个任务")
+        return removal == .trashingFiles ? subject + String(localized: "并删除文件？") : subject + String(localized: "？")
     }
 
     /// `cleansUp`：设置中的清理开关。
@@ -144,17 +144,18 @@ private struct PendingRemoval {
         var message: String
         switch removal {
         case .keepingFiles:
-            message = "未完成的下载会取消，并删除已下载的部分。已完成的文件保留在本地。"
+            message = String(localized: "未完成的下载会取消，并删除已下载的部分。已完成的文件保留在本地。")
         case .trashingFiles:
-            message = "已下载的文件会移到废纸篓。"
+            message = String(localized: "已下载的文件会移到废纸篓。")
             if jobs.contains(where: \.isUnfinished) {
-                message += "未完成的下载会取消，并删除已下载的部分。"
+                message += String(localized: "未完成的下载会取消，并删除已下载的部分。")
             }
         }
         // 网盘任务没有转存文件，所以只数有任务子目录的任务。
         let withJobDirectory = jobs.count(where: \.hasJobDirectory)
         if cleansUp, withJobDirectory > 0 {
-            message += withJobDirectory == 1 ? "网盘中这个任务的转存文件也会删除。" : "网盘中这些任务的转存文件也会删除。"
+            message += withJobDirectory == 1
+                ? String(localized: "网盘中这个任务的转存文件也会删除。") : String(localized: "网盘中这些任务的转存文件也会删除。")
         }
         return message
     }
@@ -185,28 +186,3 @@ private struct PauseResumeAllButton: View {
     }
 }
 
-/// 任务列表底部的状态栏：全部任务的总下载速度。没有在下载时不显示。
-private struct StatusBar: View {
-    @Environment(AppModel.self) private var model
-
-    var body: some View {
-        let activities = model.coordinator.jobs
-            .filter { $0.phase == .downloading }
-            .map { model.coordinator.activity(of: $0.id) }
-        let speed = activities.reduce(0) { $0 + $1.progress.bytesPerSecond }
-        if activities.contains(where: \.isRunning), speed > 0 {
-            HStack {
-                Label("\(Int64(speed).byteCount)/s", systemImage: "arrow.down")
-                    .help("全部任务的总下载速度")
-                    .accessibilityLabel("总下载速度 \(Int64(speed).byteCount)/s")
-                Spacer()
-            }
-            .font(.callout)
-            .foregroundStyle(.secondary)
-            .monospacedDigit()
-            .lineLimit(1)
-            .padding(.horizontal)
-            .padding(.vertical, 6)
-        }
-    }
-}

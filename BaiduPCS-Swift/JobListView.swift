@@ -34,7 +34,9 @@ struct JobListView: View {
                     // macOS 的 List 不会在行内容变高后重新测量行高：错误和警告是任务创建之后才出现的，
                     // 直接加进已创建的行会被行边界裁掉。它们变化时换一个视图标识，
                     // 强制 List 重新创建并测量这一行。
-                    .id("\(job.error ?? "")\n\(job.warning ?? "")")
+                    // 标识必须每行唯一（大部分行的错误和警告都是 nil），否则多行会共用一个视图，
+                    // 显示成同一份内容。
+                    .id("\(job.id)/\(job.error ?? "")/\(job.warning ?? "")")
             }
             // 右键点在选中的任务上时作用于全部选中的任务，否则只作用于点到的任务。
             .contextMenu(forSelectionType: Job.ID.self) { ids in
@@ -87,6 +89,7 @@ private struct JobRow: View {
 /// 对一组任务的操作，用于右键菜单和菜单栏的“任务”菜单。每个操作只作用于其中可以执行它的任务。
 ///
 /// 按 HIG，右键菜单隐藏不可用的操作；菜单栏菜单保留它们并显示为不可用。
+/// 标题跟随系统语言（见 `Localizable.xcstrings`）。
 struct JobActionsMenu: View {
     let jobs: [Job]
     /// 为 true 时显示不可用的操作（菜单栏菜单）。
@@ -102,7 +105,7 @@ struct JobActionsMenu: View {
                 Button {
                     model.perform(action, on: targets)
                 } label: {
-                    Label(action.title, systemImage: action.systemImage)
+                    Label(String(localized: String.LocalizationValue(action.title)), systemImage: action.systemImage)
                 }
                 .disabled(targets.isEmpty)
             }
@@ -112,7 +115,7 @@ struct JobActionsMenu: View {
             Button(role: .destructive) {
                 onRemove(jobs, .keepingFiles)
             } label: {
-                Label("移除", systemImage: "xmark")
+                Label(String(localized: "移除"), systemImage: "xmark")
             }
             .disabled(!jobs.contains { model.canOperate(on: $0) })
             let canTrash = model.canTrashFiles(of: jobs)
@@ -120,7 +123,7 @@ struct JobActionsMenu: View {
                 Button(role: .destructive) {
                     onRemove(jobs, .trashingFiles)
                 } label: {
-                    Label("移除并删除文件…", systemImage: "trash")
+                    Label(String(localized: "移除并删除文件…"), systemImage: "trash")
                 }
                 .disabled(!canTrash)
             }
@@ -253,9 +256,9 @@ struct JobStatusLine: View {
     var body: some View {
         HStack(spacing: 6) {
             Image(systemName: job.isNetdisk ? "cloud" : "link")
-                .accessibilityLabel(job.isNetdisk ? "来自我的网盘" : "来自分享链接")
+                .accessibilityLabel(job.isNetdisk ? String(localized: "来自我的网盘") : String(localized: "来自分享链接"))
             Text(isRemoving
-                 ? "正在移除…"
+                 ? String(localized: "正在移除…")
                  : job.statusText(isRunning: activity.isRunning, cleansUp: model.settings.cleanupAfterDownload))
             if !job.files.isEmpty {
                 Text(job.phase == .downloading && !job.isPaused ? activity.progress.summary : activity.progress.sizeSummary)

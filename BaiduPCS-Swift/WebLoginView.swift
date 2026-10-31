@@ -284,7 +284,7 @@ extension WebLoginSession: WKNavigationDelegate {
     func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
         currentNavigation = nil
         isLoading = false
-        loadError = "网页意外停止。"
+        loadError = String(localized: "网页意外停止。")
     }
 
     private func endLoading(_ navigation: WKNavigation?) {

@@ -69,11 +69,11 @@ struct Banners: View {
                 }
             }
             if model.account == nil, !model.coordinator.jobs.isEmpty {
-                Banner(message: "未登录百度网盘。添加任务、重试或获取新的下载链接前，请登录。") {
+                Banner(message: String(localized: "未登录百度网盘。添加任务、重试或获取新的下载链接前，请登录。")) {
                     Button("登录…") { model.presentLogin() }
                 }
             } else if model.isLoginExpired {
-                Banner(message: "百度网盘登录已失效。正在进行的下载会继续；添加任务或获取新的下载链接前，请重新登录。") {
+                Banner(message: String(localized: "百度网盘登录已失效。正在进行的下载会继续；添加任务或获取新的下载链接前，请重新登录。")) {
                     Button("重新登录…") { model.presentLogin() }
                 }
             }

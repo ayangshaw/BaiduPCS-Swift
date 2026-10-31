@@ -304,7 +304,8 @@ final class AppModel {
             downloadDirectoryProblem = nil
         } catch {
             downloadDirectory = Self.defaultDownloadDirectory
-            downloadDirectoryProblem = "无法访问之前选择的下载目录，文件会下载到“下载”目录。请重新选择下载目录。"
+            downloadDirectoryProblem =
+                String(localized: "无法访问之前选择的下载目录，文件会下载到“下载”目录。请重新选择下载目录。")
         }
     }
 
@@ -320,7 +321,7 @@ final class AppModel {
             coordinator.downloadFolder = DownloadFolder(url: url, bookmark: settings.downloadDirectoryBookmark)
         } catch {
             if isAccessing { url.stopAccessingSecurityScopedResource() }
-            downloadDirectoryProblem = "无法保存下载目录的访问权限：\(error.localizedDescription)"
+            downloadDirectoryProblem = String(localized: "无法保存下载目录的访问权限：\(error.localizedDescription)")
         }
     }
 
@@ -517,7 +518,7 @@ final class AppModel {
 
     private func notifyCompletion(of job: Job) {
         let content = UNMutableNotificationContent()
-        content.title = "下载完成"
+        content.title = String(localized: "下载完成")
         content.body = job.title
         let request = UNNotificationRequest(identifier: job.id.uuidString, content: content, trigger: nil)
         Task { try? await UNUserNotificationCenter.current().add(request) }

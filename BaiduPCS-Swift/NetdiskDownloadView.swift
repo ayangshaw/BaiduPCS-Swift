@@ -89,7 +89,7 @@ struct NetdiskDownloadView: View {
         guard let accountUK = model.account?.uk, let list = listDirectory() else {
             tree = nil
             treeAccountUK = nil
-            errorMessage = "未登录百度网盘。"
+            errorMessage = String(localized: "未登录百度网盘。")
             return
         }
         errorMessage = nil

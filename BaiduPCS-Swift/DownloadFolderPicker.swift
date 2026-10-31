@@ -70,7 +70,7 @@ struct DownloadFolderPicker: View {
                 chosenFolders.append(folder)
                 selection = folder
             } catch {
-                self.error = "无法取得“\(url.lastPathComponent)”的访问权限：\(error.localizedDescription)"
+                self.error = String(localized: "无法取得“\(url.lastPathComponent)”的访问权限：\(error.localizedDescription)")
             }
         }
     }

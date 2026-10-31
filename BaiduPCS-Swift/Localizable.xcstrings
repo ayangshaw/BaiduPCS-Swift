@@ -1,0 +1,2404 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "%@ 等 %lld 项": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ and %lld more"
+          }
+        }
+      }
+    },
+    "%@Ferry 暂时使用系统设置。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@Ferry is temporarily using system settings."
+          }
+        }
+      }
+    },
+    "%lld 个任务": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Tasks"
+          }
+        }
+      }
+    },
+    "%lld 项仍在原来的位置，可以在 Finder 中手动删除。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld items are still in their original location. You can delete them in Finder."
+          }
+        }
+      }
+    },
+    "4 位": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "4 Characters"
+          }
+        }
+      }
+    },
+    "Add Link…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加链接…"
+          }
+        }
+      }
+    },
+    "Cookie 中缺少 BDUSS，无法登录。请在浏览器登录 pan.baidu.com，在开发者工具的“网络”面板中复制网盘主页第一条请求的 Cookie 请求头。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BDUSS is missing from the Cookie, so you can’t log in. Log in to pan.baidu.com in your browser, and copy the Cookie request header of the first request to the netdisk home page from the “Network” panel of the developer tools."
+          }
+        }
+      }
+    },
+    "Cookie 中缺少 STOKEN，无法转存。请在浏览器登录 pan.baidu.com，在开发者工具的“网络”面板中复制网盘主页第一条请求的 Cookie 请求头。passport.baidu.com 的 STOKEN 不能用。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "STOKEN is missing from the Cookie, so files can’t be transferred. Log in to pan.baidu.com in your browser, and copy the Cookie request header of the first request to the netdisk home page from the “Network” panel of the developer tools. The STOKEN of passport.baidu.com doesn’t work."
+          }
+        }
+      }
+    },
+    "Download from My Netdisk…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从我的网盘下载…"
+          }
+        }
+      }
+    },
+    "Pause All": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部暂停"
+          }
+        }
+      }
+    },
+    "Resume All": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部继续"
+          }
+        }
+      }
+    },
+    "Tasks": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任务"
+          }
+        }
+      }
+    },
+    "一次操作的文件太多。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Too many files in one operation."
+          }
+        }
+      }
+    },
+    "下载": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download"
+          }
+        }
+      }
+    },
+    "下载失败": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download Failed"
+          }
+        }
+      }
+    },
+    "下载完成": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download Complete"
+          }
+        }
+      }
+    },
+    "下载完成后删除网盘中的转存文件": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete Transferred Files from Your Netdisk After Downloading"
+          }
+        }
+      }
+    },
+    "下载的数据不正确（%@）。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The downloaded data is incorrect (%@)."
+          }
+        }
+      }
+    },
+    "下载目录": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download Folder"
+          }
+        }
+      }
+    },
+    "下载目录“%@”不可访问。请在设置中重新选择这个目录，然后重试。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The download folder “%@” is inaccessible. Choose it again in Settings, then retry."
+          }
+        }
+      }
+    },
+    "从我的网盘下载": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download from My Netdisk"
+          }
+        }
+      }
+    },
+    "从我的网盘下载…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download from My Netdisk…"
+          }
+        }
+      }
+    },
+    "代理": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proxy"
+          }
+        }
+      }
+    },
+    "代理密码": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "proxy password"
+          }
+        }
+      }
+    },
+    "任务中没有记录百度账号，不能确定文件在哪个账号的网盘中。请重新添加这个任务。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The job record has no Baidu account, so it can’t be determined whose netdisk the files are in. Add the job again."
+          }
+        }
+      }
+    },
+    "任务会保留。还没有取得下载链接的文件会下载失败，重新登录后可以重试。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jobs are kept. Files without download links will fail to download; you can retry after logging in again."
+          }
+        }
+      }
+    },
+    "任务记录中没有有效的任务子目录，无法转存。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The job record has no valid job folder, so files can’t be transferred."
+          }
+        }
+      }
+    },
+    "位置": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Location"
+          }
+        }
+      }
+    },
+    "使用系统设置": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use System Settings"
+          }
+        }
+      }
+    },
+    "保存到": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save To"
+          }
+        }
+      }
+    },
+    "修改日期": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Date Modified"
+          }
+        }
+      }
+    },
+    "全选": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select All"
+          }
+        }
+      }
+    },
+    "全部": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All"
+          }
+        }
+      }
+    },
+    "全部任务的总下载速度": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total download speed of all jobs"
+          }
+        }
+      }
+    },
+    "全部暂停": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pause All"
+          }
+        }
+      }
+    },
+    "全部继续": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resume All"
+          }
+        }
+      }
+    },
+    "关闭": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close"
+          }
+        }
+      }
+    },
+    "其他…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other…"
+          }
+        }
+      }
+    },
+    "写入文件失败：%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Failed to write the file: %@"
+          }
+        }
+      }
+    },
+    "准备中 · 正在列出文件…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preparing · Listing files…"
+          }
+        }
+      }
+    },
+    "准备失败": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preparation Failed"
+          }
+        }
+      }
+    },
+    "分享不存在或已失效。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The share doesn’t exist or is no longer available."
+          }
+        }
+      }
+    },
+    "分享中没有文件": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Files in the Share"
+          }
+        }
+      }
+    },
+    "分享已失效，可能已被取消、删除或过期。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The share is no longer available. It may have been cancelled, deleted, or expired."
+          }
+        }
+      }
+    },
+    "分享链接": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share Link"
+          }
+        }
+      }
+    },
+    "分享页中没有登录信息。Cookie 可能缺少网盘的 STOKEN 或已过期，请重新复制网盘主页的 Cookie。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The share page has no login state. The Cookie may be missing the netdisk STOKEN or may have expired. Copy the netdisk home page’s Cookie again."
+          }
+        }
+      }
+    },
+    "分享页面不存在，请检查链接是否完整。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The share page doesn’t exist. Check that the link is complete."
+          }
+        }
+      }
+    },
+    "列出的文件“%@”不在勾选的目录中，无法确定保存位置。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The listed file “%@” isn’t in the checked folders, so its save location can’t be determined."
+          }
+        }
+      }
+    },
+    "剩余 %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ remaining"
+          }
+        }
+      }
+    },
+    "剩余时间": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Time Remaining"
+          }
+        }
+      }
+    },
+    "勾选的目录中没有文件，不需要下载。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The checked folders contain no files. Nothing to download."
+          }
+        }
+      }
+    },
+    "取消": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        }
+      }
+    },
+    "只有超级会员可以同时使用多个连接。其他账号会被百度限速，限速可能持续数小时到数天，并影响这个账号的所有客户端。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Only SVIP accounts can use multiple connections. Other accounts are throttled by Baidu for hours to days, affecting all clients of that account."
+          }
+        }
+      }
+    },
+    "可选": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optional"
+          }
+        }
+      }
+    },
+    "同时下载文件数": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Files Downloaded Simultaneously"
+          }
+        }
+      }
+    },
+    "名称": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name"
+          }
+        }
+      }
+    },
+    "在 Finder 中显示": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show in Finder"
+          }
+        }
+      }
+    },
+    "在浏览器中登录 pan.baidu.com，打开开发者工具的“网络”面板并刷新页面，选中第一条请求，复制请求头中 Cookie 的值。Cookie 需要包含 BDUSS 和 STOKEN。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log in to pan.baidu.com in your browser, open the “Network” panel of the developer tools and refresh the page, select the first request, and copy the value of its Cookie request header. The Cookie must contain BDUSS and STOKEN."
+          }
+        }
+      }
+    },
+    "复制分享链接后切换到 Ferry，自动打开“添加链接”并填入链接和提取码。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "After copying a share link, switch to Ferry and “Add Link” opens automatically with the link and password filled in."
+          }
+        }
+      }
+    },
+    "大小": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Size"
+          }
+        }
+      }
+    },
+    "失败": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Failed"
+          }
+        }
+      }
+    },
+    "好": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        }
+      }
+    },
+    "密码": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Password"
+          }
+        }
+      }
+    },
+    "已下载": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Downloaded"
+          }
+        }
+      }
+    },
+    "已下载的文件会移到废纸篓。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Downloaded files will be moved to the Trash."
+          }
+        }
+      }
+    },
+    "已从剪贴板填入链接": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filled the link from the clipboard"
+          }
+        }
+      }
+    },
+    "已从剪贴板填入链接和提取码": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filled the link and password from the clipboard"
+          }
+        }
+      }
+    },
+    "已存在同名的文件或目录。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An item with the same name already exists."
+          }
+        }
+      }
+    },
+    "已完成": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Completed"
+          }
+        }
+      }
+    },
+    "已暂停": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paused"
+          }
+        }
+      }
+    },
+    "已登录": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logged In"
+          }
+        }
+      }
+    },
+    "已登录百度账号，但没有取得网盘的 STOKEN，无法转存。请改用粘贴 Cookie 登录。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You are logged in to your Baidu account, but the netdisk STOKEN wasn’t obtained, so files can’t be transferred. Use cookie login instead."
+          }
+        }
+      }
+    },
+    "已选择 %lld 个任务": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Tasks Selected"
+          }
+        }
+      }
+    },
+    "并删除文件？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " and Trash Files?"
+          }
+        }
+      }
+    },
+    "应用退出时准备没有完成。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The preparation didn’t finish before the app quit."
+          }
+        }
+      }
+    },
+    "应用退出时转存没有完成。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The transfer didn’t finish before the app quit."
+          }
+        }
+      }
+    },
+    "总下载速度": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total Download Speed"
+          }
+        }
+      }
+    },
+    "总下载速度 %@/s": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total download speed %@/s"
+          }
+        }
+      }
+    },
+    "我的网盘 · %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My Netdisk · %@"
+          }
+        }
+      }
+    },
+    "打开": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open"
+          }
+        }
+      }
+    },
+    "打开分享链接": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open a Share Link"
+          }
+        }
+      }
+    },
+    "拷贝链接": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy Link"
+          }
+        }
+      }
+    },
+    "提取码": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Password"
+          }
+        }
+      }
+    },
+    "提取码应为 4 位字母或数字。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The password should be 4 letters or digits."
+          }
+        }
+      }
+    },
+    "提取码错误。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wrong password."
+          }
+        }
+      }
+    },
+    "提取码错误或已失效，请重新打开分享。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The password is wrong or has expired. Open the share again."
+          }
+        }
+      }
+    },
+    "搜索任务": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search Tasks"
+          }
+        }
+      }
+    },
+    "文件": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Files"
+          }
+        }
+      }
+    },
+    "文件名不合法。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The file name is invalid."
+          }
+        }
+      }
+    },
+    "文件名不合法，或无权访问这个文件。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The file name is invalid, or you don’t have access to this file."
+          }
+        }
+      }
+    },
+    "文件路径“%@”不能用作本地文件名，下载已停止。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The file path “%@” can’t be used as a local file name. The download has stopped."
+          }
+        }
+      }
+    },
+    "文件（%lld）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Files (%lld)"
+          }
+        }
+      }
+    },
+    "无权访问这个文件。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You don’t have access to this file."
+          }
+        }
+      }
+    },
+    "无法保存下载目录的访问权限：%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can’t save access to the download folder: %@"
+          }
+        }
+      }
+    },
+    "无法加载登录页": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can’t Load the Login Page"
+          }
+        }
+      }
+    },
+    "无法取得“%@”的访问权限：%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can’t get access to “%@”: %@"
+          }
+        }
+      }
+    },
+    "无法打开分享": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can’t Open the Share"
+          }
+        }
+      }
+    },
+    "无法把%@保存到钥匙串（%lld）。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can’t save %@ to the Keychain (%lld)."
+          }
+        }
+      }
+    },
+    "无法访问之前选择的下载目录，文件会下载到“下载”目录。请重新选择下载目录。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The previously selected download folder is inaccessible. Files will download to your Downloads folder. Choose a download folder again."
+          }
+        }
+      }
+    },
+    "无法识别分享链接。支持 https://pan.baidu.com/s/1… 和 https://pan.baidu.com/share/init?surl=… 两种格式。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The share link isn’t recognized. Supported formats are https://pan.baidu.com/s/1… and https://pan.baidu.com/share/init?surl=…."
+          }
+        }
+      }
+    },
+    "无法读取任务列表。这次启动不修改任务列表文件，之前的下载进度保留在磁盘上。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The job list can’t be read. The job list file won’t be modified this time; previous download progress is kept on disk."
+          }
+        }
+      }
+    },
+    "无法读取任务列表，原文件已备份为“%@”。之前的下载进度保留在磁盘上，这次启动不继续也不删除它们。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The job list can’t be read. The original file was backed up as “%@”. Previous download progress is kept on disk; it won’t be resumed or deleted this time."
+          }
+        }
+      }
+    },
+    "无法读取分享": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can’t Read the Share"
+          }
+        }
+      }
+    },
+    "无法读取网盘": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can’t Read Your Netdisk"
+          }
+        }
+      }
+    },
+    "显示详情": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show Inspector"
+          }
+        }
+      }
+    },
+    "暂停": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pause"
+          }
+        }
+      }
+    },
+    "有些文件没有移到废纸篓": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Some Files Weren’t Moved to the Trash"
+          }
+        }
+      }
+    },
+    "服务器": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Server"
+          }
+        }
+      }
+    },
+    "服务器返回 HTTP %lld。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The server returned HTTP %lld."
+          }
+        }
+      }
+    },
+    "未完成的下载会取消，并删除已下载的部分。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unfinished downloads will be cancelled, and partially downloaded data will be deleted."
+          }
+        }
+      }
+    },
+    "未完成的下载会取消，并删除已下载的部分。已完成的文件保留在本地。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unfinished downloads will be cancelled, and partially downloaded data will be deleted. Completed files stay where they are."
+          }
+        }
+      }
+    },
+    "未登录": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not Logged In"
+          }
+        }
+      }
+    },
+    "未登录百度网盘。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not logged in to Baidu Netdisk."
+          }
+        }
+      }
+    },
+    "未登录百度网盘。添加任务、重试或获取新的下载链接前，请登录。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not logged in to Baidu Netdisk. Log in before adding jobs, retrying, or getting new download links."
+          }
+        }
+      }
+    },
+    "未知": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unknown"
+          }
+        }
+      }
+    },
+    "未选择任务": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Job Selected"
+          }
+        }
+      }
+    },
+    "本地": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local"
+          }
+        }
+      }
+    },
+    "来源": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Source"
+          }
+        }
+      }
+    },
+    "来自分享链接": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "From a Share Link"
+          }
+        }
+      }
+    },
+    "来自我的网盘": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "From My Netdisk"
+          }
+        }
+      }
+    },
+    "检测剪贴板中的分享链接": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detect Share Links on the Clipboard"
+          }
+        }
+      }
+    },
+    "正在下载": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Downloading"
+          }
+        }
+      }
+    },
+    "正在加载…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loading…"
+          }
+        }
+      }
+    },
+    "正在完成…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Finishing…"
+          }
+        }
+      }
+    },
+    "正在打开分享…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opening Share…"
+          }
+        }
+      }
+    },
+    "正在校验…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verifying…"
+          }
+        }
+      }
+    },
+    "正在清理网盘中的转存文件…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cleaning up transferred files in your netdisk…"
+          }
+        }
+      }
+    },
+    "正在移除…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Removing…"
+          }
+        }
+      }
+    },
+    "正在读取网盘…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading Your Netdisk…"
+          }
+        }
+      }
+    },
+    "正在转存…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transferring…"
+          }
+        }
+      }
+    },
+    "每个文件的连接数": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connections per File"
+          }
+        }
+      }
+    },
+    "没有任务": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Tasks"
+          }
+        }
+      }
+    },
+    "没有删除网盘中的转存文件：": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Didn’t delete the transferred files in your netdisk: "
+          }
+        }
+      }
+    },
+    "没有取得下载链接。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No download link was obtained."
+          }
+        }
+      }
+    },
+    "没有取得下载链接：%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No download link: %@"
+          }
+        }
+      }
+    },
+    "没有失败的任务": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Failed Tasks"
+          }
+        }
+      }
+    },
+    "没有已完成的任务": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Completed Tasks"
+          }
+        }
+      }
+    },
+    "没有进行中的任务": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Downloads in Progress"
+          }
+        }
+      }
+    },
+    "添加任务": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add Task"
+          }
+        }
+      }
+    },
+    "添加分享链接…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add Share Link…"
+          }
+        }
+      }
+    },
+    "状态": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Status"
+          }
+        }
+      }
+    },
+    "用户名": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Username"
+          }
+        }
+      }
+    },
+    "用户名和密码需要同时填写。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Username and password must be filled in together."
+          }
+        }
+      }
+    },
+    "登录": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log In"
+          }
+        }
+      }
+    },
+    "登录…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log In…"
+          }
+        }
+      }
+    },
+    "登录信息": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "login information"
+          }
+        }
+      }
+    },
+    "登录已失效": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Login Expired"
+          }
+        }
+      }
+    },
+    "登录已失效，请重新复制网盘的 Cookie 登录。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your login has expired. Copy the netdisk Cookie again to log in."
+          }
+        }
+      }
+    },
+    "登录百度网盘": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log in to Baidu Netdisk"
+          }
+        }
+      }
+    },
+    "百度拒绝了请求（user is not authorized），请稍后再试。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baidu rejected the request (user is not authorized). Try again later."
+          }
+        }
+      }
+    },
+    "百度暂时无法处理请求，请稍后再试。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baidu can’t process the request right now. Try again later."
+          }
+        }
+      }
+    },
+    "百度网盘 Cookie": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baidu Netdisk Cookie"
+          }
+        }
+      }
+    },
+    "百度网盘登录已失效。正在进行的下载会继续；添加任务或获取新的下载链接前，请重新登录。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your Baidu Netdisk login has expired. Ongoing downloads continue; log in again before adding jobs or getting new download links."
+          }
+        }
+      }
+    },
+    "百度要求账号安全验证，请先在浏览器中登录网盘完成验证。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baidu requires account security verification. Log in to the netdisk in your browser and complete the verification first."
+          }
+        }
+      }
+    },
+    "百度要求输入验证码。请稍后再试，或先在浏览器中打开这个分享。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baidu requires a CAPTCHA. Try again later, or open the share in your browser first."
+          }
+        }
+      }
+    },
+    "百度账号": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baidu Account"
+          }
+        }
+      }
+    },
+    "百度返回了无法识别的数据，接口可能已变化。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baidu returned unrecognized data. The API may have changed."
+          }
+        }
+      }
+    },
+    "百度返回错误（错误码 %lld）。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baidu returned an error (code %lld)."
+          }
+        }
+      }
+    },
+    "百度返回错误（错误码 %lld）：%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baidu returned an error (code %lld): %@"
+          }
+        }
+      }
+    },
+    "移到废纸篓": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move to Trash"
+          }
+        }
+      }
+    },
+    "移除": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove"
+          }
+        }
+      }
+    },
+    "移除 %lld 个任务": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove %lld Tasks"
+          }
+        }
+      }
+    },
+    "移除“%@”": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove “%@”"
+          }
+        }
+      }
+    },
+    "移除并删除文件…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove and Trash Files…"
+          }
+        }
+      }
+    },
+    "空目录": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empty Folder"
+          }
+        }
+      }
+    },
+    "端口": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Port"
+          }
+        }
+      }
+    },
+    "端口需要在 1–65535 之间。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The port must be between 1 and 65535."
+          }
+        }
+      }
+    },
+    "等待下载": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting to Download"
+          }
+        }
+      }
+    },
+    "粘贴 Cookie 登录…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log In with a Cookie…"
+          }
+        }
+      }
+    },
+    "粘贴分享链接": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paste Share Link"
+          }
+        }
+      }
+    },
+    "粘贴百度网盘分享链接，点击“打开”或按回车键。链接带提取码时自动填入。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paste a Baidu netdisk share link and click “Open” or press Return. The password is filled in automatically if the link contains one."
+          }
+        }
+      }
+    },
+    "统计": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Statistics"
+          }
+        }
+      }
+    },
+    "继续": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resume"
+          }
+        }
+      }
+    },
+    "网盘": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Netdisk"
+          }
+        }
+      }
+    },
+    "网盘中找不到这个文件或目录。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can’t find this file or folder in your netdisk."
+          }
+        }
+      }
+    },
+    "网盘中没有文件": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Files in Your Netdisk"
+          }
+        }
+      }
+    },
+    "网盘中的目录。每个任务转存到其中的一个子目录。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A folder in your netdisk. Each job transfers into one of its subfolders."
+          }
+        }
+      }
+    },
+    "网盘中这个任务的转存文件也会删除。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The transferred files of this job in your netdisk will also be deleted."
+          }
+        }
+      }
+    },
+    "网盘中这些任务的转存文件也会删除。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The transferred files of these jobs in your netdisk will also be deleted."
+          }
+        }
+      }
+    },
+    "网盘会员": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Netdisk Membership"
+          }
+        }
+      }
+    },
+    "网盘请求和文件下载使用这个代理。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Netdisk requests and file downloads use this proxy."
+          }
+        }
+      }
+    },
+    "网络": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Network"
+          }
+        }
+      }
+    },
+    "网络错误：": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Network error: "
+          }
+        }
+      }
+    },
+    "网络错误：%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Network error: %@"
+          }
+        }
+      }
+    },
+    "网页意外停止。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The web page stopped unexpectedly."
+          }
+        }
+      }
+    },
+    "网页登录…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log In on the Web…"
+          }
+        }
+      }
+    },
+    "自定义": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Custom"
+          }
+        }
+      }
+    },
+    "触发了百度的人机验证，请稍后再试，或先在浏览器中打开这个分享完成验证。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baidu’s human verification was triggered. Try again later, or open the share in your browser first to complete verification."
+          }
+        }
+      }
+    },
+    "设置…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings…"
+          }
+        }
+      }
+    },
+    "请填写代理服务器。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter the proxy server."
+          }
+        }
+      }
+    },
+    "请填写代理端口。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter the proxy port."
+          }
+        }
+      }
+    },
+    "账号": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Account"
+          }
+        }
+      }
+    },
+    "超级会员": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SVIP"
+          }
+        }
+      }
+    },
+    "超级会员下载不限速。两项相乘最多为 %lld，建议不超过 12。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SVIP downloads aren’t throttled. The product of the two values is at most %lld; 12 or less is recommended."
+          }
+        }
+      }
+    },
+    "转存后的文件“%@”不在任务子目录中，无法确定保存位置。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The transferred file “%@” isn’t in the job folder, so its save location can’t be determined."
+          }
+        }
+      }
+    },
+    "转存后网盘中没有找到文件，可能转存尚未完成，请重试。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No files were found in your netdisk after transferring. The transfer may not be finished yet; try again."
+          }
+        }
+      }
+    },
+    "转存失败": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transfer Failed"
+          }
+        }
+      }
+    },
+    "转存失败（错误码 %lld）。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transfer failed (error code %lld)."
+          }
+        }
+      }
+    },
+    "转存失败：%@（错误码 %lld）。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transfer failed: %@ (error code %lld)."
+          }
+        }
+      }
+    },
+    "转存失败：目标目录中的文件重复。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transfer failed: duplicate files in the target folder."
+          }
+        }
+      }
+    },
+    "转存文件数 %lld 超过单次上限 %lld。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld files exceed the per-request transfer limit of %lld."
+          }
+        }
+      }
+    },
+    "转存目录": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transfer Folder"
+          }
+        }
+      }
+    },
+    "转存目录中已有同名的文件或目录“%@”。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The transfer folder already contains an item named “%@”."
+          }
+        }
+      }
+    },
+    "这个任务属于另一个百度账号。登录那个账号后可以继续。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This job belongs to another Baidu account. Log in to that account to continue."
+          }
+        }
+      }
+    },
+    "这个任务是用另一个百度账号创建的。请登录那个账号后再操作。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This job was created with another Baidu account. Log in to that account before acting on it."
+          }
+        }
+      }
+    },
+    "这个分享因违规被禁用。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This share was disabled for violations."
+          }
+        }
+      }
+    },
+    "这个分享需要提取码。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This share requires a password."
+          }
+        }
+      }
+    },
+    "进行中": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Downloading"
+          }
+        }
+      }
+    },
+    "退出登录": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log Out"
+          }
+        }
+      }
+    },
+    "退出登录？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log Out?"
+          }
+        }
+      }
+    },
+    "速度": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speed"
+          }
+        }
+      }
+    },
+    "重新加载": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reload"
+          }
+        }
+      }
+    },
+    "重新登录…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log In Again…"
+          }
+        }
+      }
+    },
+    "重试": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retry"
+          }
+        }
+      }
+    },
+    "隐藏详情": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hide Inspector"
+          }
+        }
+      }
+    },
+    "非超级会员": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non-SVIP"
+          }
+        }
+      }
+    },
+    "非超级会员（包括普通会员）同时使用多个连接会被百度限速，所以两项都是 1。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non-SVIP accounts (including regular members) are throttled by Baidu when using multiple connections, so both values are 1."
+          }
+        }
+      }
+    },
+    "？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "?"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

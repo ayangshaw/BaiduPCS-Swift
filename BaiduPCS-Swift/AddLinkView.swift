@@ -160,7 +160,7 @@ struct AddLinkView: View {
         guard !isOpening else { return }
         share = nil
         guard let client = model.client else {
-            errorMessage = "未登录百度网盘。"
+            errorMessage = String(localized: "未登录百度网盘。")
             return
         }
         guard let link = ShareLink.parse(linkText) else {

@@ -168,7 +168,7 @@ private struct JobStatusText: View {
 
     var body: some View {
         Text(isRemoving
-             ? "正在移除…"
+             ? String(localized: "正在移除…")
              : job.statusText(isRunning: activity.isRunning, cleansUp: model.settings.cleanupAfterDownload))
     }
 }
@@ -273,7 +273,7 @@ extension Job {
     /// 网盘任务的来源：勾选条目的网盘路径。勾选了多个条目时显示第一个和数量。分享任务为 nil。
     var netdiskSource: String? {
         guard case .netdisk(let entries) = source, let first = entries.first else { return nil }
-        let path = entries.count == 1 ? first.path : "\(first.path) 等 \(entries.count) 项"
-        return "我的网盘 · \(path)"
+        let path = entries.count == 1 ? first.path : String(localized: "\(first.path) 等 \(entries.count) 项")
+        return String(localized: "我的网盘 · \(path)")
     }
 }

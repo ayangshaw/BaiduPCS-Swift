@@ -15,10 +15,10 @@ enum JobCategory: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .all: "全部"
-        case .active: "进行中"
-        case .completed: "已完成"
-        case .failed: "失败"
+        case .all: String(localized: "全部")
+        case .active: String(localized: "进行中")
+        case .completed: String(localized: "已完成")
+        case .failed: String(localized: "失败")
         }
     }
 
@@ -34,10 +34,10 @@ enum JobCategory: String, CaseIterable, Identifiable {
     /// 这个分类没有任务时的说明。
     var emptyTitle: String {
         switch self {
-        case .all: "没有任务"
-        case .active: "没有进行中的任务"
-        case .completed: "没有已完成的任务"
-        case .failed: "没有失败的任务"
+        case .all: String(localized: "没有任务")
+        case .active: String(localized: "没有进行中的任务")
+        case .completed: String(localized: "没有已完成的任务")
+        case .failed: String(localized: "没有失败的任务")
         }
     }
 
@@ -66,9 +66,38 @@ struct SidebarView: View {
             }
         }
         .edgeBar(.bottom) {
-            AccountView()
-                .padding(.horizontal, 12)
-                .padding(.vertical, 10)
+            VStack(spacing: 0) {
+                StatusBar()
+                AccountView()
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 10)
+            }
+        }
+    }
+}
+
+/// 侧边栏底部的状态栏：全部任务的总下载速度。没有在下载时不显示。
+private struct StatusBar: View {
+    @Environment(AppModel.self) private var model
+
+    var body: some View {
+        let activities = model.coordinator.jobs
+            .filter { $0.phase == .downloading }
+            .map { model.coordinator.activity(of: $0.id) }
+        let speed = activities.reduce(0) { $0 + $1.progress.bytesPerSecond }
+        if activities.contains(where: \.isRunning), speed > 0 {
+            HStack {
+                Label("\(Int64(speed).byteCount)/s", systemImage: "arrow.down")
+                    .help("全部任务的总下载速度")
+                    .accessibilityLabel("总下载速度 \(Int64(speed).byteCount)/s")
+                Spacer()
+            }
+            .font(.callout)
+            .foregroundStyle(.secondary)
+            .monospacedDigit()
+            .lineLimit(1)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
         }
     }
 }
@@ -94,10 +123,10 @@ private struct AccountView: View {
                         .foregroundStyle(.secondary)
                         .accessibilityHidden(true)
                     VStack(alignment: .leading, spacing: 0) {
-                        Text(account.username.isEmpty ? "百度账号" : account.username)
+                        Text(account.username.isEmpty ? String(localized: "百度账号") : account.username)
                             .lineLimit(1)
                             .truncationMode(.tail)
-                        Text(model.isLoginExpired ? "登录已失效" : "已登录")
+                        Text(model.isLoginExpired ? String(localized: "登录已失效") : String(localized: "已登录"))
                             .font(.caption)
                             .foregroundStyle(model.isLoginExpired ? AnyShapeStyle(.orange) : AnyShapeStyle(.secondary))
                     }

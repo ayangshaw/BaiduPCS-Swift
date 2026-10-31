@@ -28,7 +28,7 @@ public final class BaiduDownloadSource: DownloadSource {
             state.attempts[request.id] = attempt + 1
             return (state.client, attempt)
         }
-        guard let client else { throw PermanentLinkError(description: "未登录百度网盘。") }
+        guard let client else { throw PermanentLinkError(description: String(localized: "未登录百度网盘。")) }
         do {
             let link = try await client.downloadLink(for: Self.remotePath(from: request.context), preference: attempt)
             return ResolvedURL(url: link.url, headers: link.headers)

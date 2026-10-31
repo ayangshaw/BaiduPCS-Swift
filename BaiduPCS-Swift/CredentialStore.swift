@@ -86,7 +86,7 @@ private struct KeychainItem {
     private func check(_ status: OSStatus) throws {
         guard status == errSecSuccess else {
             throw NSError(domain: NSOSStatusErrorDomain, code: Int(status),
-                          userInfo: [NSLocalizedDescriptionKey: "无法把\(name)保存到钥匙串（\(status)）。"])
+                          userInfo: [NSLocalizedDescriptionKey: String(localized: "无法把\(name)保存到钥匙串（\(Int(status))）。")])
         }
     }
 }

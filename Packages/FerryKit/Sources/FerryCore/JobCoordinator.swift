@@ -132,15 +132,17 @@ public final class JobCoordinator {
             loaded = []
             isLoaded = false
             if let backup = store.moveAsideUnreadableFile() {
-                loadWarning = "无法读取任务列表，原文件已备份为“\(backup.lastPathComponent)”。之前的下载进度保留在磁盘上，这次启动不继续也不删除它们。"
+                loadWarning = String(
+                    localized: "无法读取任务列表，原文件已备份为“\(backup.lastPathComponent)”。之前的下载进度保留在磁盘上，这次启动不继续也不删除它们。")
             } else {
                 canSave = false
-                loadWarning = "无法读取任务列表。这次启动不修改任务列表文件，之前的下载进度保留在磁盘上。"
+                loadWarning = String(localized: "无法读取任务列表。这次启动不修改任务列表文件，之前的下载进度保留在磁盘上。")
             }
         }
         for index in loaded.indices where loaded[index].phase == .transferring {
             loaded[index].phase = .failed(.transfer)
-            loaded[index].error = loaded[index].link != nil ? "应用退出时转存没有完成。" : "应用退出时准备没有完成。"
+            loaded[index].error = loaded[index].link != nil
+                ? String(localized: "应用退出时转存没有完成。") : String(localized: "应用退出时准备没有完成。")
         }
         // 启动完成前添加的任务排在前面。
         jobs += loaded
@@ -407,12 +409,12 @@ public final class JobCoordinator {
             case .share(let link, let password, let entries):
                 let remoteFiles = try await transferShare(job, link: link, password: password, entries: entries,
                                                           session: session, removingExisting: removingExisting, netdisk: netdisk)
-                if remoteFiles.isEmpty { warning = "勾选的目录中没有文件，不需要下载。" }
+                if remoteFiles.isEmpty { warning = String(localized: "勾选的目录中没有文件，不需要下载。") }
                 files = try Self.jobFiles(for: remoteFiles, in: job.remoteDirectory)
             case .netdisk(let entries):
                 files = try await prepare(entries, netdisk: netdisk)
                 // 网盘的列表没有转存延迟，不用像分享任务那样再检查一次。
-                if files.isEmpty { warning = "勾选的目录中没有文件，不需要下载。" }
+                if files.isEmpty { warning = String(localized: "勾选的目录中没有文件，不需要下载。") }
             }
             try Task.checkCancellation()
             guard activeJob(id) != nil else { return }
@@ -737,7 +739,7 @@ public final class JobCoordinator {
                     update(id) { $0.isCleanedUp = true }
                 } catch {
                     guard !Task.isCancelled else { return }
-                    update(id) { $0.warning = "没有删除网盘中的转存文件：" + Self.message(for: error) }
+                    update(id) { $0.warning = String(localized: "没有删除网盘中的转存文件：") + Self.message(for: error) }
                 }
             }
             guard !Task.isCancelled, activeJob(id) != nil else { return }
@@ -1042,15 +1044,15 @@ enum TransferCheckError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .noFiles:
-            "转存后网盘中没有找到文件，可能转存尚未完成，请重试。"
+            String(localized: "转存后网盘中没有找到文件，可能转存尚未完成，请重试。")
         case .missingJobDirectory:
-            "任务记录中没有有效的任务子目录，无法转存。"
+            String(localized: "任务记录中没有有效的任务子目录，无法转存。")
         case .outsideJobDirectory(let path):
-            "转存后的文件“\(path)”不在任务子目录中，无法确定保存位置。"
+            String(localized: "转存后的文件“\(path)”不在任务子目录中，无法确定保存位置。")
         case .outsideCheckedEntry(let path):
-            "列出的文件“\(path)”不在勾选的目录中，无法确定保存位置。"
+            String(localized: "列出的文件“\(path)”不在勾选的目录中，无法确定保存位置。")
         case .unsafePath(let path):
-            "文件路径“\(path)”不能用作本地文件名，下载已停止。"
+            String(localized: "文件路径“\(path)”不能用作本地文件名，下载已停止。")
         }
     }
 }
@@ -1064,9 +1066,10 @@ enum CoordinatorError: LocalizedError, PermanentDownloadSourceError {
 
     var errorDescription: String? {
         switch self {
-        case .notLoggedIn: "未登录百度网盘。"
-        case .otherAccount: "这个任务是用另一个百度账号创建的。请登录那个账号后再操作。"
-        case .unknownAccount: "任务中没有记录百度账号，不能确定文件在哪个账号的网盘中。请重新添加这个任务。"
+        case .notLoggedIn: String(localized: "未登录百度网盘。")
+        case .otherAccount: String(localized: "这个任务是用另一个百度账号创建的。请登录那个账号后再操作。")
+        case .unknownAccount:
+            String(localized: "任务中没有记录百度账号，不能确定文件在哪个账号的网盘中。请重新添加这个任务。")
         }
     }
 }
@@ -1074,11 +1077,11 @@ enum CoordinatorError: LocalizedError, PermanentDownloadSourceError {
 extension DownloadFailure {
     public var message: String {
         switch self {
-        case .network(let code): "网络错误：" + URLError(code).localizedDescription
-        case .httpStatus(let status, _): "服务器返回 HTTP \(status)。"
-        case .invalidResponse(let reason): "下载的数据不正确（\(reason)）。"
-        case .resolveFailed(let reason): "没有取得下载链接：\(reason)"
-        case .fileSystem(let reason): "写入文件失败：\(reason)"
+        case .network(let code): String(localized: "网络错误：") + URLError(code).localizedDescription
+        case .httpStatus(let status, _): String(localized: "服务器返回 HTTP \(status)。")
+        case .invalidResponse(let reason): String(localized: "下载的数据不正确（\(reason)）。")
+        case .resolveFailed(let reason): String(localized: "没有取得下载链接：\(reason)")
+        case .fileSystem(let reason): String(localized: "写入文件失败：\(reason)")
         }
     }
 }

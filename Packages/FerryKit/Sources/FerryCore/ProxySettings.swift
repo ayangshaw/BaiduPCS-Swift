@@ -40,10 +40,10 @@ public struct ProxySettings: Codable, Sendable, Hashable {
     /// SOCKS5 设置不完整的原因，给设置页显示。使用系统设置或设置完整时返回 nil。
     public func problem(password: String) -> String? {
         guard mode == .socks5 else { return nil }
-        if trimmedHost.isEmpty { return "请填写代理服务器。" }
-        guard let port else { return "请填写代理端口。" }
-        if !Self.portRange.contains(port) { return "端口需要在 1–65535 之间。" }
-        if username.isEmpty != password.isEmpty { return "用户名和密码需要同时填写。" }
+        if trimmedHost.isEmpty { return String(localized: "请填写代理服务器。") }
+        guard let port else { return String(localized: "请填写代理端口。") }
+        if !Self.portRange.contains(port) { return String(localized: "端口需要在 1–65535 之间。") }
+        if username.isEmpty != password.isEmpty { return String(localized: "用户名和密码需要同时填写。") }
         return nil
     }
 
