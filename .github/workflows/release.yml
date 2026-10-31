@@ -56,7 +56,7 @@ jobs:
           security list-keychains -d user -s "$keychain" $(security list-keychains -d user | tr -d '"')
           rm "$RUNNER_TEMP/signing.p12"
 
-          ditto build/Build/Products/Release/BaiduPCS-Swift.app Ferry.app
+          ditto build/Build/Products/Release/Ferry.app Ferry.app
           codesign -d --entitlements - --xml Ferry.app > "$RUNNER_TEMP/entitlements.plist"
           codesign --force --options runtime --timestamp=none \
             --entitlements "$RUNNER_TEMP/entitlements.plist" -s "$SIGNING_CERT_SHA1" Ferry.app
