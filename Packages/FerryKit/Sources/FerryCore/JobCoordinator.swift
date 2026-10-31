@@ -240,6 +240,11 @@ public final class JobCoordinator {
     /// - Parameter downloadFolder: 用户为这个任务选择的下载目录。nil 时使用 `self.downloadFolder`（设置中的下载目录）。
     @discardableResult
     public func addJob(session: ShareSession, entries: [ShareEntry], downloadFolder: DownloadFolder? = nil) -> Job {
+        // 百度不允许把分享中的文件转存回分享者自己的网盘：同一个 fs_id 不能存在两份，转存必定失败。
+        // 自己的分享里条目的 `path` 就是自己网盘中的路径，跳过转存，直接按网盘任务下载。
+        if let accountUK, session.shareUK == accountUK {
+            return addNetdiskJob(entries: entries.map(Self.netdiskEntry), accountUK: accountUK, downloadFolder: downloadFolder)
+        }
         var job = Job(link: session.link, password: session.password, entries: entries, transferFolder: settings.transferFolder)
         job.downloadFolder = downloadFolder ?? self.downloadFolder
         job.accountUK = accountUK
@@ -248,6 +253,11 @@ public final class JobCoordinator {
         save()
         startTransfer(job.id, session: session, removingExisting: false)
         return job
+    }
+
+    /// 自己的分享中的条目 → 自己网盘中的条目。
+    private static func netdiskEntry(_ entry: ShareEntry) -> NetdiskEntry {
+        NetdiskEntry(fsID: entry.fsID, name: entry.name, path: entry.path, isDirectory: entry.isDirectory, size: entry.size)
     }
 
     /// 创建网盘任务并开始准备：列出勾选的目录，然后直接下载。不转存，也不修改网盘中的文件。

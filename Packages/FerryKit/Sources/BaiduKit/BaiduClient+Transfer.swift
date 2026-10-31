@@ -42,7 +42,8 @@ extension BaiduClient {
             if itemErrno == -30 {
                 throw BaiduError.transferConflict(name: Path.lastComponent(info["path"].string ?? ""))
             }
-            throw BaiduError.transferFailed(code: itemErrno)
+            // 只有错误码往往无从判断原因，带上服务器返回的说明。
+            throw BaiduError.transferFailed(code: itemErrno, serverMessage: json["show_msg"].string)
         case 4:
             throw BaiduError.transferDuplicate
         default:

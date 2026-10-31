@@ -170,6 +170,40 @@ import Testing
         #expect(fixture.netdisk.operations == [.list("/资料/2024/报告")])
     }
 
+    /// 自己分享的链接：条目的 `path` 就是自己网盘中的路径，跳过转存，直接按网盘任务下载。
+    @Test func ownShareDownloadsDirectlyWithoutTransferring() async throws {
+        let disk = ["/我的分享/课程.mp4": randomData(2_000), "/我的分享/docs/说明.txt": randomData(100)]
+        let fixture = Fixture(disk: disk)
+        let coordinator = fixture.makeCoordinator(settings: cleanup)
+        await coordinator.start()
+
+        func shareEntry(_ path: String, directory: Bool) -> ShareEntry {
+            let size = disk[path].map { Int64($0.count) } ?? 0
+            return ShareEntry(fsID: Int64(path.hashValue), name: String(path.split(separator: "/").last!),
+                              path: path, isDirectory: directory, size: size)
+        }
+        let session = ShareSession(link: FakeNetdisk.link, password: nil, shareID: 1, shareUK: Fixture.accountUK,
+                                   bdstoken: "token", cookies: [])
+        let job = coordinator.addJob(session: session, entries: [
+            shareEntry("/我的分享/课程.mp4", directory: false), shareEntry("/我的分享/docs", directory: true),
+        ])
+
+        // 成为网盘任务：不建任务子目录，不转存，也不清理。
+        guard case .netdisk = job.source else { Issue.record("expected a netdisk job, got \(job.source)"); return }
+        #expect(job.accountUK == Fixture.accountUK)
+        #expect(!job.hasJobDirectory)
+        try await coordinator.waitForPhase(.completed, of: job.id)
+
+        let finished = try #require(coordinator.job(job.id))
+        #expect(finished.files.map(\.relativePath) == ["课程.mp4", "docs/说明.txt"])
+        for file in finished.files {
+            #expect(fixture.contents(file.relativePath) == disk[file.remotePath], "\(file.remotePath)")
+        }
+        #expect(fixture.netdisk.operations == [.list("/我的分享/docs")])
+        #expect(fixture.netdisk.deletes.isEmpty)
+        #expect(fixture.netdisk.remotePaths() == disk.keys.sorted())
+    }
+
     /// 文件树属于另一个账号（例如打开 sheet 后换了账号）：任务记录文件树的账号，不在当前账号的网盘中列出这些路径。
     @Test func recordsTheAccountOfItsEntries() async throws {
         let fixture = Fixture(disk: disk)

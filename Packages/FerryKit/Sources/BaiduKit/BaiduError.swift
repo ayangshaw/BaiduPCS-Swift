@@ -27,7 +27,7 @@ public enum BaiduError: LocalizedError, Equatable, Sendable {
     case transferLimitExceeded(count: Int, limit: Int)
     case transferConflict(name: String)
     case transferDuplicate
-    case transferFailed(code: Int)
+    case transferFailed(code: Int, serverMessage: String?)
 
     // 网盘与下载
     case fileNotFound
@@ -87,8 +87,12 @@ public enum BaiduError: LocalizedError, Equatable, Sendable {
             "转存目录中已有同名的文件或目录“\(name)”。"
         case .transferDuplicate:
             "转存失败：目标目录中的文件重复。"
-        case let .transferFailed(code):
-            "转存失败（错误码 \(code)）。"
+        case let .transferFailed(code, serverMessage):
+            if let serverMessage, !serverMessage.isEmpty {
+                "转存失败：\(serverMessage)（错误码 \(code)）。"
+            } else {
+                "转存失败（错误码 \(code)）。"
+            }
         case .fileNotFound:
             "网盘中找不到这个文件或目录。"
         case .alreadyExists:

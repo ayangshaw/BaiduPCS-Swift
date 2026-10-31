@@ -164,8 +164,12 @@ extension StubbedNetworkTests {
 
         @Test func transferReportsDuplicateAndUnknownErrors() throws {
             #expect(throws: BaiduError.transferDuplicate) { try BaiduClient.checkTransfer(JSON(["errno": 4])) }
-            #expect(throws: BaiduError.transferFailed(code: -32)) {
+            #expect(throws: BaiduError.transferFailed(code: -32, serverMessage: nil)) {
                 try BaiduClient.checkTransfer(JSON(["errno": 12, "info": [["errno": -32]]]))
+            }
+            // 服务器返回的说明会出现在错误信息中。
+            #expect(throws: BaiduError.transferFailed(code: 4, serverMessage: "抱歉，转存失败")) {
+                try BaiduClient.checkTransfer(JSON(["errno": 12, "show_msg": "抱歉，转存失败", "info": [["errno": 4]]]))
             }
             #expect(throws: BaiduError.loginExpired) { try BaiduClient.checkTransfer(JSON(["errno": -6])) }
             #expect(throws: BaiduError.invalidNameOrAccessDenied) { try BaiduClient.checkTransfer(JSON(["errno": -7])) }

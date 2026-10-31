@@ -31,6 +31,10 @@ struct JobListView: View {
         } else {
             List(jobs, selection: $selection) { job in
                 JobRow(job: job)
+                    // macOS 的 List 不会在行内容变高后重新测量行高：错误和警告是任务创建之后才出现的，
+                    // 直接加进已创建的行会被行边界裁掉。它们变化时换一个视图标识，
+                    // 强制 List 重新创建并测量这一行。
+                    .id("\(job.error ?? "")\n\(job.warning ?? "")")
             }
             // 右键点在选中的任务上时作用于全部选中的任务，否则只作用于点到的任务。
             .contextMenu(forSelectionType: Job.ID.self) { ids in
@@ -274,6 +278,7 @@ struct JobNotes: View {
                 .font(.caption)
                 .foregroundStyle(.red)
                 .textSelection(.enabled)
+                .help(error)
         }
         if model.coordinator.belongsToOtherAccount(job) {
             Text("这个任务属于另一个百度账号。登录那个账号后可以继续。")
@@ -284,6 +289,7 @@ struct JobNotes: View {
             Text(warning)
                 .font(.caption)
                 .foregroundStyle(.orange)
+                .help(warning)
         }
     }
 }
