@@ -17,5 +17,8 @@ DerivedData/
 xcuserdata/
 .DS_Store
 
+# 本地分析文档，不上传。
+/ARCHITECTURE.md
+
 # Wrangler local state for the website.
 .wrangler/

@@ -1514,7 +1514,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "No Downloads in Progress"
+            "value": "No Tasks in Progress"
           }
         }
       }
@@ -1547,7 +1547,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Status"
+            "value": "Login Status"
           }
         }
       }
@@ -1658,6 +1658,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "Baidu can’t process the request right now. Try again later."
+          }
+        }
+      }
+    },
+    "百度用户名": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Account"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用户名"
           }
         }
       }
@@ -2284,7 +2301,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Downloading"
+            "value": "In Progress"
           }
         }
       }

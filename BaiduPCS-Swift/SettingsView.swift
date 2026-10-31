@@ -285,7 +285,7 @@ private struct AccountSettingsView: View {
         Form {
             Section {
                 if let account = model.account {
-                    LabeledContent("用户名", value: account.username.isEmpty ? "未知" : account.username)
+                    LabeledContent("百度用户名", value: account.username.isEmpty ? "未知" : account.username)
                     LabeledContent("状态") {
                         if model.isLoginExpired {
                             Label("登录已失效", systemImage: "exclamationmark.triangle.fill")
